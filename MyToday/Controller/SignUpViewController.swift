@@ -1,0 +1,197 @@
+//
+//  SignUpViewController.swift
+//  MyToday
+//
+//  Created by Ch. Shan on 10/25/23.
+//
+
+import UIKit
+import Loaf
+
+class SignUpViewController: UIViewController {
+    
+    @IBOutlet weak var nameTF: UITextField!
+    
+    @IBOutlet weak var emailTF: UITextField!
+    
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBOutlet weak var confirmPasswordTF: UITextField!
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    @IBOutlet weak var signUpButtonView: UIView!
+    
+    @IBOutlet weak var passwordHideEyeButton: UIButton!
+    
+    @IBOutlet weak var confirmPasswordHideEyeButton: UIButton!
+    
+    @IBOutlet weak var signUPButton: UIButton!
+    
+    let userCoreDataManager = UserCoreDataManager()
+    
+    var iconClick = true
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        
+        roundSignUpButton()
+        passwordInDots()
+        signUPButton.setThemeColor()
+    }
+    
+    func passwordInDots(){
+        
+        passwordTF.isSecureTextEntry = true
+        confirmPasswordTF.isSecureTextEntry = true
+        
+    }
+    
+    func roundSignUpButton(){
+        
+        signUpButton.layer.cornerRadius = 16
+        signUpButtonView.layer.cornerRadius = 16
+        
+    }
+    
+    @IBAction func passwordViewButtonTapped(_ sender: Any) {
+        
+        if iconClick {
+            let image = UIImage(named: "showeye")
+            passwordHideEyeButton.setImage(image, for: .normal)
+            passwordTF.isSecureTextEntry = false
+            
+        } else {
+            let image = UIImage(named: "eyes")
+            passwordHideEyeButton.setImage(image, for: .normal)
+            passwordTF.isSecureTextEntry = true
+        }
+        iconClick = !iconClick
+        
+    }
+    
+    @IBAction func confirmPasswordViewButtonTapped(_ sender: Any) {
+        
+        if iconClick {
+            let image = UIImage(named: "showeye")
+            confirmPasswordHideEyeButton.setImage(image, for: .normal)
+            confirmPasswordTF.isSecureTextEntry = false
+        } else {
+            let image = UIImage(named: "eyes")
+            confirmPasswordHideEyeButton.setImage(image, for: .normal)
+            confirmPasswordTF.isSecureTextEntry = true
+        }
+        iconClick = !iconClick
+        
+        
+    }
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        
+        
+        let enteredName = nameTF.text ?? ""
+        let entereEmail = emailTF.text ?? ""
+        let enteredPassword = passwordTF.text ?? ""
+        let enteredConfirmPassword = confirmPasswordTF.text ?? ""
+
+        if enteredName == "" {
+            
+            Loaf("Pleease enter the name", state: .error, location: .top, sender: self).show()
+            
+        }else if entereEmail == "" {
+            
+            Loaf("Pleease enter the email", state: .error, location: .top, sender: self).show()
+            
+        }else if enteredPassword == ""{
+            
+            Loaf("Pleease enter the password", state: .error, location: .top, sender: self).show()
+            
+        }else if enteredConfirmPassword == "" {
+            
+            Loaf("Pleease enter the confirm password", state: .error, location: .top, sender: self).show()
+            
+        }else if enteredPassword != enteredConfirmPassword {
+            
+            Loaf("Passwords do not match", state: .error, location: .top, sender: self).show()
+            
+        }else if !enteredPassword.isPasswordValid(){
+            
+            Loaf("Pleease enter atleast eight characters", state: .error, location: .top, sender: self).show()
+            
+        }else if !entereEmail.isEmailValid() {
+            
+            Loaf("Pleease enter the valid email", state: .error, location: .top, sender: self).show()
+            
+        }else if userCoreDataManager.isEmailFound(email: entereEmail){
+            
+            Loaf("Account Already Exist with this email", state: .error, location: .top, sender: self).show()
+            
+        }else{
+            
+            userCoreDataManager.createUser(name: enteredName, email: entereEmail, password: enteredPassword)
+            self.navigationController?.popViewController(animated: true)
+    
+        }
+        
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any){
+        
+        self.navigationController?.popViewControllers(viewsToPop: 1)
+        
+    }
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        guard let name = nameTF.text, !name.isEmpty,
+//              let email = emailTF.text, !email.isEmpty,
+//              let password = passwordTF.text, !password.isEmpty,
+//              let confirmPassword = confirmPasswordTF.text, !confirmPassword.isEmpty
+//        else {
+//            Loaf("All fields are required", state: .error, location: .top, sender: self).show()
+//            return
+//        }
+//
+//        // Check email format
+//        if !email.isEmailValid() {
+//            Loaf("Invalid email format", state: .error, location: .top, sender: self).show()
+//            return
+//        }
+//
+//        // Check if passwords match
+//        if password != confirmPassword{
+//            Loaf("Passwords do not match", state: .error, location: .top, sender: self).show()
+//            return
+//        }
+//
+//        if !password.isPasswordValid(){
+//            Loaf("Enter a valid password, at least 8 characters", state: .error, location: .top, sender: self).show()
+//            return
+//        }
+//
+//        // If all validations pass, proceed to the next screen
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController {
+//            self.navigationController?.pushViewController(vc, animated: true)
+//            Loaf("Success", state: .success, location: .top, sender: self).show()
+//
+//        }
+//
+//    }
