@@ -33,7 +33,6 @@ class SignInViewController: UIViewController {
         passwordInDots()
         // Do any additional setup after loading the view.
         signInButton.setThemeColor()
-        // hello shan 2
     }
     
     func passwordInDots(){

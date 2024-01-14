@@ -41,7 +41,7 @@ class SignUpViewController: UIViewController {
         roundSignUpButton()
         passwordInDots()
         signUPButton.setThemeColor()
-        // hello shan
+        
     }
     
     func passwordInDots(){
