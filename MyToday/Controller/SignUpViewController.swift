@@ -36,6 +36,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        // here is view did load
         
         roundSignUpButton()
         passwordInDots()
