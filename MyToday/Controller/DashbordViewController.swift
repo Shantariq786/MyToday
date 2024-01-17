@@ -24,7 +24,6 @@ class DashbordViewController: UIViewController{
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserTableViewCell")
-        print("Viewdid load call")
 
     }
     

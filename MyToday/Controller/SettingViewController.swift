@@ -17,8 +17,23 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var userName: UILabel!
     
+    @IBOutlet weak var accountLabel: UILabel!
+    
+    @IBOutlet weak var languagesLabel: UILabel!
+    
+    @IBOutlet weak var appIconLabel: UILabel!
+    
+    @IBOutlet weak var changeModeLabel: UILabel!
+    
+    @IBOutlet weak var privacyLabel: UILabel!
+    
+    @IBOutlet weak var helpCenterLabel: UILabel!
+    
+    @IBOutlet weak var logOutLabel: UILabel!
+    
     let userCoreDataManager = UserCoreDataManager()
     
+    var languageIndex = LanguageIndex.currentIndex
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +43,43 @@ class SettingViewController: UIViewController {
         
         profileImage()
         userLoginName()
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification), name: Notification.Name("currentLanguageChanged"), object: nil)
+    }
+    
+    @objc func methodOfReceivedNotification() {
+        DispatchQueue.main.async {
+            self.languageIndex = LanguageIndex.currentIndex
+            if self.languageIndex == 0 {
+                self.accountLabel.text = "account".localized(loc: "en")
+                self.languagesLabel.text = "languages".localized(loc: "en")
+                self.appIconLabel.text = "app_icon".localized(loc: "en")
+                self.changeModeLabel.text = "change_mode".localized(loc: "en")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "en")
+                self.helpCenterLabel.text = "help_center".localized(loc: "en")
+                self.logOutLabel.text = "log_out".localized(loc: "en")
+            }
+            else if self.languageIndex == 3 {
+                self.accountLabel.text = "account".localized(loc: "fr")
+                self.languagesLabel.text = "languages".localized(loc: "fr")
+                self.appIconLabel.text = "app_icon".localized(loc: "fr")
+                self.changeModeLabel.text = "change_mode".localized(loc: "fr")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "fr")
+                self.helpCenterLabel.text = "help_center".localized(loc: "fr")
+                self.logOutLabel.text = "log_out".localized(loc: "fr")
+            }
+        }
     }
     
     @IBAction func accountButtonTapped(_ sender: Any) {
         
+        print("tapped")
         let accountVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         accountVC.userImage = { image in
             self.profileImageView.image  = image
@@ -66,6 +114,13 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func languagesButtonTapped(_ sender: Any){
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LanguagesViewController") as! LanguagesViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     

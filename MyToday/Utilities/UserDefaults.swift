@@ -21,3 +21,16 @@ struct ColorTheme {
         }
     }
 }
+
+
+struct LanguageIndex {
+    static let keyforLaunch = "languageIndex"
+    static var currentIndex: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: keyforLaunch)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: keyforLaunch)
+        }
+    }
+}

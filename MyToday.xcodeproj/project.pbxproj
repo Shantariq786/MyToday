@@ -34,6 +34,9 @@
 		75A138692AE918DF00E311F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A138672AE918DF00E311F0 /* LaunchScreen.storyboard */; };
 		75A138732AE927EC00E311F0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A138722AE927EC00E311F0 /* SignUpViewController.swift */; };
 		75A138752AE9282400E311F0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A138742AE9282400E311F0 /* SignInViewController.swift */; };
+		75A21F5E2B5673D0001AF248 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A21F5D2B5673D0001AF248 /* LanguagesViewController.swift */; };
+		75A21F622B567C9C001AF248 /* LanguagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A21F602B567C9C001AF248 /* LanguagesTableViewCell.swift */; };
+		75A21F632B567C9C001AF248 /* LanguagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A21F612B567C9C001AF248 /* LanguagesTableViewCell.xib */; };
 		75ACA3A52AED3B8700B36FE6 /* MyToday.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75ACA3A32AED3B8700B36FE6 /* MyToday.xcdatamodeld */; };
 		75ACA3AD2AEF8EA900B36FE6 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACA3AB2AEF8EA900B36FE6 /* User+CoreDataClass.swift */; };
 		75ACA3AE2AEF8EA900B36FE6 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACA3AC2AEF8EA900B36FE6 /* User+CoreDataProperties.swift */; };
@@ -45,6 +48,7 @@
 		75B69B842AF619FF007CB90C /* CreatTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B69B832AF619FF007CB90C /* CreatTaskViewController.swift */; };
 		75CF02A82B3D5CA2002613CD /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF02A72B3D5CA2002613CD /* EditNameViewController.swift */; };
 		75CF02AA2B3D5CD0002613CD /* EditEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF02A92B3D5CD0002613CD /* EditEmailViewController.swift */; };
+		75CFFCF02B57E4B200067DE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75CFFCF22B57E4B200067DE5 /* Localizable.strings */; };
 		75E8E5562B496CB60058C455 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E8E5552B496CB60058C455 /* UserDefaults.swift */; };
 		75EB845C2B400D45005E6BC5 /* AppIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB845B2B400D45005E6BC5 /* AppIconViewController.swift */; };
 		75EB845F2B403E16005E6BC5 /* AppIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB845D2B403E16005E6BC5 /* AppIconCollectionViewCell.swift */; };
@@ -86,6 +90,9 @@
 		75A1386A2AE918DF00E311F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A138722AE927EC00E311F0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		75A138742AE9282400E311F0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		75A21F5D2B5673D0001AF248 /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
+		75A21F602B567C9C001AF248 /* LanguagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewCell.swift; sourceTree = "<group>"; };
+		75A21F612B567C9C001AF248 /* LanguagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguagesTableViewCell.xib; sourceTree = "<group>"; };
 		75ACA3A42AED3B8700B36FE6 /* MyToday.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyToday.xcdatamodel; sourceTree = "<group>"; };
 		75ACA3AB2AEF8EA900B36FE6 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		75ACA3AC2AEF8EA900B36FE6 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -97,6 +104,8 @@
 		75B69B832AF619FF007CB90C /* CreatTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatTaskViewController.swift; sourceTree = "<group>"; };
 		75CF02A72B3D5CA2002613CD /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		75CF02A92B3D5CD0002613CD /* EditEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmailViewController.swift; sourceTree = "<group>"; };
+		75CFFCF12B57E4B200067DE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		75CFFCF32B57E4E100067DE5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		75E8E5552B496CB60058C455 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		75EB845B2B400D45005E6BC5 /* AppIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconViewController.swift; sourceTree = "<group>"; };
 		75EB845D2B403E16005E6BC5 /* AppIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -157,6 +166,7 @@
 		755AB3A82AF6680000860503 /* Adding Cells */ = {
 			isa = PBXGroup;
 			children = (
+				75A21F5F2B567C66001AF248 /* Languages Cell */,
 				75EB84562B400CFF005E6BC5 /* App Icon */,
 				755AB3A92AF6698500860503 /* Cell */,
 			);
@@ -178,6 +188,7 @@
 				757E1E832B3D4E81000C4143 /* ImagePicker.swift */,
 				758CD20E2B4151050074AE58 /* Constants.swift */,
 				75E8E5552B496CB60058C455 /* UserDefaults.swift */,
+				75CFFCF22B57E4B200067DE5 /* Localizable.strings */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,12 +256,22 @@
 				7589C4FF2B208334008AAB37 /* Tabbar.swift */,
 				7589C5012B2086F1008AAB37 /* ProfileViewController.swift */,
 				752FC5732B3ED1EA00E86F5D /* SettingViewController.swift */,
+				75A21F5D2B5673D0001AF248 /* LanguagesViewController.swift */,
 				75EB845B2B400D45005E6BC5 /* AppIconViewController.swift */,
 				75CF02A72B3D5CA2002613CD /* EditNameViewController.swift */,
 				75CF02A92B3D5CD0002613CD /* EditEmailViewController.swift */,
 				7589C5032B208DA0008AAB37 /* UpComingsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		75A21F5F2B567C66001AF248 /* Languages Cell */ = {
+			isa = PBXGroup;
+			children = (
+				75A21F602B567C9C001AF248 /* LanguagesTableViewCell.swift */,
+				75A21F612B567C9C001AF248 /* LanguagesTableViewCell.xib */,
+			);
+			path = "Languages Cell";
 			sourceTree = "<group>";
 		};
 		75ACA3AA2AEF8E9B00B36FE6 /* Coredata */ = {
@@ -352,6 +373,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 75A1384D2AE918DC00E311F0;
 			productRefGroup = 75A138572AE918DC00E311F0 /* Products */;
@@ -370,8 +392,10 @@
 			files = (
 				752FC5722B3EC18500E86F5D /* edit.png in Resources */,
 				751458E42B2C2FA5009D77D4 /* SpinView.xib in Resources */,
+				75A21F632B567C9C001AF248 /* LanguagesTableViewCell.xib in Resources */,
 				75A138692AE918DF00E311F0 /* LaunchScreen.storyboard in Resources */,
 				75A138662AE918DF00E311F0 /* Assets.xcassets in Resources */,
+				75CFFCF02B57E4B200067DE5 /* Localizable.strings in Resources */,
 				75A138612AE918DC00E311F0 /* Main.storyboard in Resources */,
 				75B69B822AF3BE7B007CB90C /* ticl.png in Resources */,
 				755AB3AD2AF669A900860503 /* UserTableViewCell.xib in Resources */,
@@ -449,11 +473,13 @@
 				751458E62B2C35F2009D77D4 /* UIView+Extension.swift in Sources */,
 				755AB3AC2AF669A900860503 /* UserTableViewCell.swift in Sources */,
 				75CF02A82B3D5CA2002613CD /* EditNameViewController.swift in Sources */,
+				75A21F622B567C9C001AF248 /* LanguagesTableViewCell.swift in Sources */,
 				751458E22B2C2F87009D77D4 /* SpinView.swift in Sources */,
 				75CF02AA2B3D5CD0002613CD /* EditEmailViewController.swift in Sources */,
 				7589C5002B208334008AAB37 /* Tabbar.swift in Sources */,
 				758CD20F2B4151050074AE58 /* Constants.swift in Sources */,
 				75ACA3AD2AEF8EA900B36FE6 /* User+CoreDataClass.swift in Sources */,
+				75A21F5E2B5673D0001AF248 /* LanguagesViewController.swift in Sources */,
 				75E8E5562B496CB60058C455 /* UserDefaults.swift in Sources */,
 				75A1385C2AE918DC00E311F0 /* SceneDelegate.swift in Sources */,
 				7518CDB92AEA8A4200ACADCE /* DashbordViewController.swift in Sources */,
@@ -485,6 +511,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		75CFFCF22B57E4B200067DE5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75CFFCF12B57E4B200067DE5 /* en */,
+				75CFFCF32B57E4E100067DE5 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -492,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -552,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

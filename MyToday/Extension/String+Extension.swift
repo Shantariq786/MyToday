@@ -25,3 +25,18 @@ extension String{
         return self.count >= 8
     }
 }
+
+
+
+extension String {
+    
+    //code for swift 2.3
+    
+    func localized(loc:String) -> String {
+        
+        let path = Bundle.main.path(forResource: loc, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!,   value: "", comment: "")
+        
+    }
+}
