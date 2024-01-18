@@ -36,17 +36,12 @@ class DashbordViewController: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification), name: Notification.Name("currentThemeChanged"), object: nil)
     }
     
-    
     @objc func methodOfReceivedNotification() {
         DispatchQueue.main.async {
             self.themeIndex = ColorTheme.currentIndex
             self.tableView.reloadData()
         }
     }
-    
-    
-    
-    
     
     @IBAction func addButtonTapped(_ sender: Any){
         

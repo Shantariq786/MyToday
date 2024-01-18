@@ -25,11 +25,19 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var editEmail: UIButton!
     
+    @IBOutlet weak var profileLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    
     let userCoreDataManager = UserCoreDataManager()
     
     var localItems: [Todo] = []
     
     let imagePicker = ImagePicker()
+    
+    var languageIndex = LanguageIndex.currentIndex
     
     var userImage:((_ image:UIImage)->Void)?
     
@@ -56,6 +64,32 @@ class ProfileViewController: UIViewController {
             profileImage.image = image
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification), name: Notification.Name("currentLanguageChanged"), object: nil)
+    }
+    
+    @objc func methodOfReceivedNotification() {
+        DispatchQueue.main.async {
+            self.languageIndex = LanguageIndex.currentIndex
+            if self.languageIndex == 0 {
+                self.profileLabel.text = "profile".localized(loc: "en")
+                self.nameLabel.text = "name".localized(loc: "en")
+                self.emailLabel.text = "email".localized(loc: "en")
+                self.editEmail.setTitle("edit_email".localized(loc: "en"), for: .normal)
+                self.editName.setTitle("edit_name".localized(loc: "en"), for: .normal)
+            }
+            else if self.languageIndex == 3 {
+                self.profileLabel.text = "profile".localized(loc: "fr")
+                self.nameLabel.text = "name".localized(loc: "fr")
+                self.emailLabel.text = "email".localized(loc: "fr")
+                self.editEmail.setTitle("edit_email".localized(loc: "fr"), for: .normal)
+                self.editName.setTitle("edit_name".localized(loc: "fr"), for: .normal)
+            }
+        }
     }
     
     func searchUserId(){

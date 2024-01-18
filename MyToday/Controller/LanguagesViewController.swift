@@ -11,7 +11,7 @@ class LanguagesViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     
-    let languages = ["English", "Urdu", "Hindi", "French", "German", "Chineese", "Punjabi", "Italic"]
+    let languages = ["English", "Urdu", "Hindi", "French", "German", "Chineese", "Italian", "Swedish", "Korean", "Arabic", "Turkish"]
     
     var selectedLanguageIndex = 0
     
@@ -22,7 +22,6 @@ class LanguagesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
         
         tableView.register(UINib(nibName: "LanguagesTableViewCell", bundle: nil), forCellReuseIdentifier: "LanguagesTableViewCell")
-        
         selectedLanguageIndex = LanguageIndex.currentIndex
 
     }
@@ -46,19 +45,16 @@ class LanguagesViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedLanguageIndex = indexPath.row
         LanguageIndex.currentIndex = selectedLanguageIndex
         tableView.reloadData()
         
         NotificationCenter.default.post(name: Notification.Name("currentLanguageChanged"), object: nil)
-        self.navigationController?.popViewControllers(viewsToPop: 1)
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 80
     }
     
 }

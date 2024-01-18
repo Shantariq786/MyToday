@@ -1,10 +1,22 @@
 
+// Sign In
+
+"welcome_back" = "Content de te revoir!";
+"your_work_faster_and_structured_with_todyapp" = "Votre travail plus rapide et structuré avec Todyapp";
+"email_address" = "Adresse e-mail";
+"password" = "Mot de passe";
+"remember_me" = "Souviens-toi de moi";
+"sign_in" = "Se connecter";
+"forgot_password" = "Mot de passe oublié";
+"don't_have_an_account" = "Je n'ai pas de compte";
+"sign_up_now" = "S'inscrire maintenant";
+
+
 // Sign Up
 
-"welcome_back" = "Welcome Back!";
-"your_work_faster_and_structured_with_todyapp" = "Your work faster and structured with Todyapp";
-"email_address" = "Email Address";
-
+"create_account" = "Créer un compte";
+"create_your_account_and_feel_the_benefits" = "Créez votre compte et ressentez les avantages";
+"confirm_password" = "Confirmez le mot de passe";
 
 
 // Settings View Controller
@@ -17,3 +29,12 @@
 "help_center" = "Centre D'aide";
 "log_out" = "Se Déconnecter";
 
+
+// Profile Screen
+
+"profile" = "Profil";
+"upload_profile_image" = "Télécharger L'image Du Profil";
+"name" = "Nom";
+"email" = "E-mail";
+"edit_name" = "Modifier Le Nom";
+"edit_email" = "Modifier L'Es-mail";

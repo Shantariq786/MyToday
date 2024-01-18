@@ -711,7 +711,10 @@
                     <connections>
                         <outlet property="editEmail" destination="R26-FY-wfN" id="Mqf-Ge-1U3"/>
                         <outlet property="editName" destination="3CB-ll-uR8" id="DGk-Ra-Pkm"/>
+                        <outlet property="emailLabel" destination="xFx-rq-QFc" id="eBy-bn-KiV"/>
+                        <outlet property="nameLabel" destination="98L-4b-Glg" id="Zoy-xH-eQe"/>
                         <outlet property="profileImage" destination="lYS-YD-u7S" id="qt7-yP-Ye4"/>
+                        <outlet property="profileLabel" destination="7FC-Uc-FV0" id="rir-LB-h7d"/>
                         <outlet property="uploadProfileImage" destination="R2s-zz-qch" id="K9S-24-ra7"/>
                         <outlet property="userEmail" destination="558-JB-XqG" id="ZuL-nt-rMa"/>
                         <outlet property="userName" destination="QX7-or-hlh" id="8f0-Fb-TUY"/>
@@ -1357,11 +1360,17 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                             </button>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VHn-UN-vrW">
+                                                                <rect key="frame" x="296" y="-0.33333333333337123" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="switchButtonTapped:" destination="9rw-f7-990" eventType="valueChanged" id="uKy-pr-6cF"/>
+                                                                </connections>
+                                                            </switch>
                                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-N9-ton">
                                                                 <rect key="frame" x="0.0" y="-0.66666666666668561" width="345" height="31.333333333333332"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zvV-1T-sDY">
-                                                                        <rect key="frame" x="0.0" y="3.6666666666666856" width="138" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="3.6666666666666856" width="345" height="24"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="elz-Dx-xEO">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -1371,25 +1380,14 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-1k-9Ge">
-                                                                                <rect key="frame" x="36" y="0.0" width="102" height="24"/>
+                                                                                <rect key="frame" x="36" y="0.0" width="309" height="24"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                                 <color key="textColor" red="0.46274509800000002" green="0.4941176471" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VHn-UN-vrW">
-                                                                        <rect key="frame" x="296" y="0.0" width="51" height="31.333333333333332"/>
-                                                                        <connections>
-                                                                            <action selector="switchButtonTapped:" destination="9rw-f7-990" eventType="valueChanged" id="uKy-pr-6cF"/>
-                                                                        </connections>
-                                                                    </switch>
                                                                 </subviews>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="VHn-UN-vrW" secondAttribute="trailing" id="BJz-oz-Qxg"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="VHn-UN-vrW" secondAttribute="trailing" id="Gyc-QP-5Ek"/>
-                                                                    <constraint firstItem="VHn-UN-vrW" firstAttribute="top" secondItem="Czd-N9-ton" secondAttribute="top" id="qbn-OE-BGb"/>
-                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1397,10 +1395,12 @@
                                                             <constraint firstAttribute="trailing" secondItem="5uZ-wv-lv4" secondAttribute="trailing" id="H94-NX-sNw"/>
                                                             <constraint firstItem="Czd-N9-ton" firstAttribute="leading" secondItem="5uZ-wv-lv4" secondAttribute="leading" id="Lce-qd-rgM"/>
                                                             <constraint firstItem="Czd-N9-ton" firstAttribute="centerY" secondItem="5uZ-wv-lv4" secondAttribute="centerY" id="O8m-Ia-vCW"/>
+                                                            <constraint firstItem="VHn-UN-vrW" firstAttribute="centerY" secondItem="rhV-Du-fs3" secondAttribute="centerY" id="XH8-65-MgI"/>
                                                             <constraint firstItem="Czd-N9-ton" firstAttribute="top" secondItem="rhV-Du-fs3" secondAttribute="top" constant="-0.66666666666668561" id="afD-9E-3RR"/>
                                                             <constraint firstAttribute="bottom" secondItem="5uZ-wv-lv4" secondAttribute="bottom" id="bxO-3B-j0K"/>
                                                             <constraint firstItem="5uZ-wv-lv4" firstAttribute="leading" secondItem="rhV-Du-fs3" secondAttribute="leading" id="fKT-Id-yPY"/>
                                                             <constraint firstItem="Czd-N9-ton" firstAttribute="centerX" secondItem="5uZ-wv-lv4" secondAttribute="centerX" id="gMo-km-TKe"/>
+                                                            <constraint firstAttribute="trailing" secondItem="VHn-UN-vrW" secondAttribute="trailing" id="gbK-QH-ZEI"/>
                                                             <constraint firstItem="5uZ-wv-lv4" firstAttribute="top" secondItem="rhV-Du-fs3" secondAttribute="top" id="mIL-AO-ucD"/>
                                                             <constraint firstAttribute="height" constant="30" id="x6J-YU-SD4"/>
                                                         </constraints>
@@ -1542,10 +1542,10 @@
                                                             <action selector="logOutButtonTapped:" destination="9rw-f7-990" eventType="touchUpInside" id="tuz-dE-irg"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="194" translatesAutoresizingMaskIntoConstraints="NO" id="6rF-9G-rBi">
+                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" spacing="194" translatesAutoresizingMaskIntoConstraints="NO" id="6rF-9G-rBi">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ubv-Al-4za">
+                                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ubv-Al-4za">
                                                                 <rect key="frame" x="0.0" y="0.0" width="131" height="24"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="YDn-8A-1Gc">

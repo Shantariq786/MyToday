@@ -65,6 +65,24 @@ class SettingViewController: UIViewController {
                 self.helpCenterLabel.text = "help_center".localized(loc: "en")
                 self.logOutLabel.text = "log_out".localized(loc: "en")
             }
+            else if self.languageIndex == 1 {
+                self.accountLabel.text = "account".localized(loc: "ur")
+                self.languagesLabel.text = "languages".localized(loc: "ur")
+                self.appIconLabel.text = "app_icon".localized(loc: "ur")
+                self.changeModeLabel.text = "change_mode".localized(loc: "ur")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "ur")
+                self.helpCenterLabel.text = "help_center".localized(loc: "ur")
+                self.logOutLabel.text = "log_out".localized(loc: "ur")
+            }
+            else if self.languageIndex == 2 {
+                self.accountLabel.text = "account".localized(loc: "hi")
+                self.languagesLabel.text = "languages".localized(loc: "hi")
+                self.appIconLabel.text = "app_icon".localized(loc: "hi")
+                self.changeModeLabel.text = "change_mode".localized(loc: "hi")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "hi")
+                self.helpCenterLabel.text = "help_center".localized(loc: "hi")
+                self.logOutLabel.text = "log_out".localized(loc: "hi")
+            }
             else if self.languageIndex == 3 {
                 self.accountLabel.text = "account".localized(loc: "fr")
                 self.languagesLabel.text = "languages".localized(loc: "fr")
@@ -73,6 +91,69 @@ class SettingViewController: UIViewController {
                 self.privacyLabel.text = "privacy_policy".localized(loc: "fr")
                 self.helpCenterLabel.text = "help_center".localized(loc: "fr")
                 self.logOutLabel.text = "log_out".localized(loc: "fr")
+            }
+            else if self.languageIndex == 4 {
+                self.accountLabel.text = "account".localized(loc: "de")
+                self.languagesLabel.text = "languages".localized(loc: "de")
+                self.appIconLabel.text = "app_icon".localized(loc: "de")
+                self.changeModeLabel.text = "change_mode".localized(loc: "de")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "de")
+                self.helpCenterLabel.text = "help_center".localized(loc: "de")
+                self.logOutLabel.text = "log_out".localized(loc: "de")
+            }
+            else if self.languageIndex == 5 {
+                self.accountLabel.text = "account".localized(loc: "zh-Hant")
+                self.languagesLabel.text = "languages".localized(loc: "zh-Hant")
+                self.appIconLabel.text = "app_icon".localized(loc: "zh-Hant")
+                self.changeModeLabel.text = "change_mode".localized(loc: "zh-Hant")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "zh-Hant")
+                self.helpCenterLabel.text = "help_center".localized(loc: "zh-Hant")
+                self.logOutLabel.text = "log_out".localized(loc: "zh-Hant")
+            }
+            else if self.languageIndex == 6 {
+                self.accountLabel.text = "account".localized(loc: "it")
+                self.languagesLabel.text = "languages".localized(loc: "it")
+                self.appIconLabel.text = "app_icon".localized(loc: "it")
+                self.changeModeLabel.text = "change_mode".localized(loc: "it")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "it")
+                self.helpCenterLabel.text = "help_center".localized(loc: "it")
+                self.logOutLabel.text = "log_out".localized(loc: "it")
+            }
+            else if self.languageIndex == 7 {
+                self.accountLabel.text = "account".localized(loc: "sv")
+                self.languagesLabel.text = "languages".localized(loc: "sv")
+                self.appIconLabel.text = "app_icon".localized(loc: "sv")
+                self.changeModeLabel.text = "change_mode".localized(loc: "sv")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "sv")
+                self.helpCenterLabel.text = "help_center".localized(loc: "sv")
+                self.logOutLabel.text = "log_out".localized(loc: "sv")
+            }
+            else if self.languageIndex == 8 {
+                self.accountLabel.text = "account".localized(loc: "ko")
+                self.languagesLabel.text = "languages".localized(loc: "ko")
+                self.appIconLabel.text = "app_icon".localized(loc: "ko")
+                self.changeModeLabel.text = "change_mode".localized(loc: "ko")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "ko")
+                self.helpCenterLabel.text = "help_center".localized(loc: "ko")
+                self.logOutLabel.text = "log_out".localized(loc: "ko")
+            }
+            else if self.languageIndex == 9 {
+                self.accountLabel.text = "account".localized(loc: "ar")
+                self.languagesLabel.text = "languages".localized(loc: "ar")
+                self.appIconLabel.text = "app_icon".localized(loc: "ar")
+                self.changeModeLabel.text = "change_mode".localized(loc: "ar")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "ar")
+                self.helpCenterLabel.text = "help_center".localized(loc: "ar")
+                self.logOutLabel.text = "log_out".localized(loc: "ar")
+            }
+            else if self.languageIndex == 10 {
+                self.accountLabel.text = "account".localized(loc: "tr")
+                self.languagesLabel.text = "languages".localized(loc: "tr")
+                self.appIconLabel.text = "app_icon".localized(loc: "tr")
+                self.changeModeLabel.text = "change_mode".localized(loc: "tr")
+                self.privacyLabel.text = "privacy_policy".localized(loc: "tr")
+                self.helpCenterLabel.text = "help_center".localized(loc: "tr")
+                self.logOutLabel.text = "log_out".localized(loc: "tr")
             }
         }
     }
@@ -114,6 +195,8 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func languagesButtonTapped(_ sender: Any){
