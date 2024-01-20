@@ -17,6 +17,7 @@
 "create_account" = "اکاؤنٹ بنائیں";
 "create_your_account_and_feel_the_benefits" = "اپنا اکاؤنٹ بنائیں اور فوائد محسوس کریں۔";
 "confirm_password" = "پاس ورڈ کی تصدیق کریں";
+"sign_up" = "سائن اپ";
 
 
 // Settings View Controller
@@ -40,3 +41,23 @@
 "edit_email" = "ای میل میں ترمیم کریں";
 
 
+// CreateTodo Screen
+
+"title" = "عنوان";
+"description" = "تفصیل";
+"priority" = "ترجیح";
+"time" = "وقت";
+"create" = "بنانا";
+
+
+// EditTodo Screen
+
+"update" = "اپ ڈیٹ";
+"edit_today" = "آج ہی میں ترمیم کریں";
+
+
+//Tabbar Text
+
+"home" = "گھر";
+"upcomings" = "آنے والے";
+"settings" = "ترتیبات";

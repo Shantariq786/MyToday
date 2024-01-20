@@ -17,6 +17,7 @@
 "create_account" = "Hesap oluşturmak";
 "create_your_account_and_feel_the_benefits" = "Hesabınızı oluşturun ve avantajları hissedin ";
 "confirm_password" = "Şifreyi Onayla";
+"sign_up" = "Üye olmak";
 
 
 // Settings View Controller
@@ -40,3 +41,23 @@
 "edit_email" = "E-postayı Düzenle";
 
 
+// CreateTodo Screen
+
+"title" = "Başlık";
+"description" = "Tanım";
+"priority" = "Öncelik";
+"time" = "Zaman";
+"create" = "Yaratmak";
+
+
+// EditTodo Screen
+
+"update" = "Güncelleme";
+"edit_today" = "Bugünü Düzenle";
+
+
+//Tabbar Text
+
+"home" = "Ev";
+"upcomings" = "Yaklaşanlar";
+"settings" = "Ayarlar";

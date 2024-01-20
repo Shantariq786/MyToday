@@ -11,14 +11,19 @@ import Loaf
 class SignInViewController: UIViewController {
     
     @IBOutlet weak var emailTF: UITextField!
-    
     @IBOutlet weak var passwordTF: UITextField!
-    
     @IBOutlet weak var rememberMeButton: UIButton!
-    
     @IBOutlet weak var passwordHideButton: UIButton!
-    
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var welcomebackLabel: UILabel!
+    @IBOutlet weak var welcomebackDescriptionLabel: UILabel!
+    @IBOutlet weak var emailAddressLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var dontHaveAccountLabel: UILabel!
+    @IBOutlet weak var signUpNowButton: UIButton!
+    @IBOutlet weak var rememberMeLabel: UILabel!
+    
     
     let userCoreDataManager = UserCoreDataManager()
     
@@ -33,7 +38,24 @@ class SignInViewController: UIViewController {
         passwordInDots()
         // Do any additional setup after loading the view.
         signInButton.setThemeColor()
+        
+        updateLabelsLanguage()
     }
+    
+    func updateLabelsLanguage() {
+
+        self.welcomebackLabel.text = "welcome_back".makeLocalizationOnLabel()
+        self.welcomebackDescriptionLabel.text = "your_work_faster_and_structured_with_todyapp".makeLocalizationOnLabel()
+        self.emailAddressLabel.text = "email_address".makeLocalizationOnLabel()
+        self.passwordLabel.text = "password".makeLocalizationOnLabel()
+        self.rememberMeLabel.text = "remember_me".makeLocalizationOnLabel()
+        self.dontHaveAccountLabel.text = "don't_have_an_account".makeLocalizationOnLabel()
+        self.forgotPasswordButton.setTitle("forgot_password".makeLocalizationOnLabel(), for: .normal)
+        self.signUpNowButton.setTitle("sign_up_now".makeLocalizationOnLabel(), for: .normal)
+        self.signInButton.setTitle("sign_in".makeLocalizationOnLabel(), for: .normal)
+
+    }
+    
     
     func passwordInDots(){
         

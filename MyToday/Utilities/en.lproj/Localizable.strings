@@ -17,6 +17,7 @@
 "create_account" = "Create account";
 "create_your_account_and_feel_the_benefits" = "Create your account and feel the benefits ";
 "confirm_password" = "Confirm Password";
+"sign_up" = "Sign up";
 
 
 // Settings View Controller
@@ -40,3 +41,23 @@
 "edit_email" = "Edit Email";
 
 
+// CreateTodo Screen
+
+"title" = "Title";
+"description" = "Description";
+"priority" = "Priority";
+"time" = "Time";
+"create" = "Create";
+
+
+// EditTodo Screen
+
+"update" = "Update";
+"edit_today" = "Edit Today";
+
+
+//Tabbar Text
+
+"home" = "Home";
+"upcomings" = "Upcomings";
+"settings" = "Settings";

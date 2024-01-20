@@ -17,6 +17,10 @@ class CreatTaskViewController: UIViewController {
     @IBOutlet weak var priorityTF: UITextField!
     @IBOutlet weak var timeTF: UITextField!
     @IBOutlet weak var creatTapped: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var timeLabel:UILabel!
     
     
     let todoCoreDataManager = TodoCoreDataManager()
@@ -34,6 +38,18 @@ class CreatTaskViewController: UIViewController {
     
         creatTapped.setThemeColor()
         
+        updateLabelsLanguage()
+        
+    }
+    
+    func updateLabelsLanguage() {
+        
+        self.titleLabel.text = "title".makeLocalizationOnLabel()
+        self.descriptionLabel.text = "description".makeLocalizationOnLabel()
+        self.priorityLabel.text = "priority".makeLocalizationOnLabel()
+        self.timeLabel.text = "time".makeLocalizationOnLabel()
+        self.creatTapped.setTitle("create".makeLocalizationOnLabel(), for: .normal)
+
     }
     
     @IBAction func creatButtonTapped(_ sender: Any){

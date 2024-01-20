@@ -11,22 +11,21 @@ import Loaf
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var nameTF: UITextField!
-    
     @IBOutlet weak var emailTF: UITextField!
-    
     @IBOutlet weak var passwordTF: UITextField!
-    
     @IBOutlet weak var confirmPasswordTF: UITextField!
-    
     @IBOutlet weak var signUpButton: UIButton!
-    
     @IBOutlet weak var signUpButtonView: UIView!
-    
     @IBOutlet weak var passwordHideEyeButton: UIButton!
-    
     @IBOutlet weak var confirmPasswordHideEyeButton: UIButton!
-    
     @IBOutlet weak var signUPButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var confirmPassowrdLabel: UILabel!
+    @IBOutlet weak var creatAccoutnLabel: UILabel!
+    @IBOutlet weak var creatAccoutnDescriptionLabel: UILabel!
+    
     
     let userCoreDataManager = UserCoreDataManager()
     
@@ -36,12 +35,23 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        
         roundSignUpButton()
         passwordInDots()
         signUPButton.setThemeColor()
+        updateLabelsLanguage()
         
+    }
+    
+    func updateLabelsLanguage() {
+
+        self.creatAccoutnLabel.text = "create_account".makeLocalizationOnLabel()
+        self.nameLabel.text = "name".makeLocalizationOnLabel()
+        self.emailLabel.text = "email".makeLocalizationOnLabel()
+        self.passwordLabel.text = "password".makeLocalizationOnLabel()
+        self.confirmPassowrdLabel.text = "confirm_password".makeLocalizationOnLabel()
+        self.creatAccoutnDescriptionLabel.text = "create_your_account_and_feel_the_benefits".makeLocalizationOnLabel()
+        self.signUPButton.setTitle("sign_up".makeLocalizationOnLabel(), for: .normal)
+
     }
     
     func passwordInDots(){
@@ -144,9 +154,6 @@ class SignUpViewController: UIViewController {
         self.navigationController?.popViewControllers(viewsToPop: 1)
         
     }
-    
-    
-    
     
 }
 

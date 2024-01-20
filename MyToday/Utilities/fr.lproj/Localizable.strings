@@ -17,6 +17,7 @@
 "create_account" = "Créer un compte";
 "create_your_account_and_feel_the_benefits" = "Créez votre compte et ressentez les avantages";
 "confirm_password" = "Confirmez le mot de passe";
+"sign_up" = "S'inscrire";
 
 
 // Settings View Controller
@@ -38,3 +39,25 @@
 "email" = "E-mail";
 "edit_name" = "Modifier Le Nom";
 "edit_email" = "Modifier L'Es-mail";
+
+
+// CreateTodo Screen
+
+"title" = "Titre";
+"description" = "Description";
+"priority" = "Priorité";
+"time" = "Temps";
+"create" = "Créer";
+
+
+// EditTodo Screen
+
+"update" = "Mise à jour";
+"edit_today" = "Modifier aujourd'hui";
+
+
+//Tabbar Text
+
+"home" = "Maison";
+"upcomings" = "À venir";
+"settings" = "Paramètres";

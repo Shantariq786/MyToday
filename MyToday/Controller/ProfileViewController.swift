@@ -64,32 +64,19 @@ class ProfileViewController: UIViewController {
             profileImage.image = image
         }
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        updateLabelsLanguage()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification), name: Notification.Name("currentLanguageChanged"), object: nil)
     }
     
-    @objc func methodOfReceivedNotification() {
-        DispatchQueue.main.async {
-            self.languageIndex = LanguageIndex.currentIndex
-            if self.languageIndex == 0 {
-                self.profileLabel.text = "profile".localized(loc: "en")
-                self.nameLabel.text = "name".localized(loc: "en")
-                self.emailLabel.text = "email".localized(loc: "en")
-                self.editEmail.setTitle("edit_email".localized(loc: "en"), for: .normal)
-                self.editName.setTitle("edit_name".localized(loc: "en"), for: .normal)
-            }
-            else if self.languageIndex == 3 {
-                self.profileLabel.text = "profile".localized(loc: "fr")
-                self.nameLabel.text = "name".localized(loc: "fr")
-                self.emailLabel.text = "email".localized(loc: "fr")
-                self.editEmail.setTitle("edit_email".localized(loc: "fr"), for: .normal)
-                self.editName.setTitle("edit_name".localized(loc: "fr"), for: .normal)
-            }
-        }
+    func updateLabelsLanguage() {
+        
+        self.profileLabel.text = "profile".makeLocalizationOnLabel()
+        self.nameLabel.text = "name".makeLocalizationOnLabel()
+        self.emailLabel.text = "email".makeLocalizationOnLabel()
+        self.editEmail.setTitle("edit_email".makeLocalizationOnLabel(), for: .normal)
+        self.editName.setTitle("edit_name".makeLocalizationOnLabel(), for: .normal)
+        self.uploadProfileImage.setTitle("upload_profile_image".makeLocalizationOnLabel(), for: .normal)
+        
     }
     
     func searchUserId(){
@@ -145,7 +132,7 @@ class ProfileViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
-
+    
     @IBAction func editEmailTapped(_ sender: Any){
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EditEmailViewController") as! EditEmailViewController

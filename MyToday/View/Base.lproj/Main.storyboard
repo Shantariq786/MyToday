@@ -222,11 +222,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="yIG-Z9-3ot"/>
                     <connections>
+                        <outlet property="confirmPassowrdLabel" destination="Js8-np-g0T" id="kZ1-HF-WkD"/>
                         <outlet property="confirmPasswordHideEyeButton" destination="7qI-EY-LnN" id="Lcd-mD-Nc4"/>
                         <outlet property="confirmPasswordTF" destination="dHO-nC-EKq" id="Hjz-5z-SNb"/>
+                        <outlet property="creatAccoutnDescriptionLabel" destination="mQ0-fD-2h6" id="ps7-4v-rzQ"/>
+                        <outlet property="creatAccoutnLabel" destination="rrd-Dy-Ets" id="VD8-jq-0PB"/>
+                        <outlet property="emailLabel" destination="4OC-5w-Fcf" id="Cxp-g9-dUX"/>
                         <outlet property="emailTF" destination="0jw-Zh-HVt" id="20k-hR-tFm"/>
+                        <outlet property="nameLabel" destination="6pR-UB-VvT" id="ud7-0Y-DI3"/>
                         <outlet property="nameTF" destination="3H4-P4-x1z" id="bfF-qD-8BA"/>
                         <outlet property="passwordHideEyeButton" destination="8cX-Sd-aHk" id="aq0-Pt-Vd7"/>
+                        <outlet property="passwordLabel" destination="4DG-K3-3P1" id="bp3-bd-dEZ"/>
                         <outlet property="passwordTF" destination="wNi-nf-F6q" id="Qb9-Tu-Szj"/>
                         <outlet property="signUPButton" destination="7Ma-Nq-crq" id="0zA-vP-59E"/>
                         <outlet property="signUpButton" destination="7Ma-Nq-crq" id="4cR-mX-NXl"/>
@@ -457,11 +463,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="qGl-KV-rAF"/>
                     <connections>
+                        <outlet property="dontHaveAccountLabel" destination="P7Z-Dz-pWi" id="4tU-ka-0rD"/>
+                        <outlet property="emailAddressLabel" destination="ApI-eo-Ijm" id="NSj-Bw-fV2"/>
                         <outlet property="emailTF" destination="nax-QZ-HWE" id="TQF-Fr-4Tq"/>
+                        <outlet property="forgotPasswordButton" destination="yf5-uu-kIy" id="azm-HK-DhD"/>
                         <outlet property="passwordHideButton" destination="pO6-kE-fAl" id="dzx-ts-09L"/>
+                        <outlet property="passwordLabel" destination="Vqu-EV-Ktn" id="Lud-A1-wOX"/>
                         <outlet property="passwordTF" destination="HKZ-sK-rig" id="EhA-3c-7d4"/>
                         <outlet property="rememberMeButton" destination="6rc-hg-NMp" id="EXr-Ps-bbP"/>
+                        <outlet property="rememberMeLabel" destination="uvz-40-raR" id="UKJ-Hb-f7B"/>
                         <outlet property="signInButton" destination="S6G-Or-m9n" id="A0Q-z2-aMF"/>
+                        <outlet property="signUpNowButton" destination="v5g-ZX-eSg" id="gF3-Mo-c7N"/>
+                        <outlet property="welcomebackDescriptionLabel" destination="F10-xc-8Ko" id="cG8-k9-ZAO"/>
+                        <outlet property="welcomebackLabel" destination="PAo-gg-7eP" id="kfb-H4-OWf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZS5-6k-ouo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -578,13 +592,13 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-Ye-6Gw">
-                                <rect key="frame" x="20" y="300.66666666666663" width="353" height="295.66666666666663"/>
+                                <rect key="frame" x="20" y="300.66666666666663" width="353" height="331.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="CmV-vy-vUW">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="295.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="331.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xvJ-Mn-XSp">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="138.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="156.33333333333334"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Rhc-2I-nH8">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="87.333333333333329"/>
@@ -612,15 +626,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ENW-2N-imM">
-                                                        <rect key="frame" x="0.0" y="106.33333333333331" width="353" height="32"/>
+                                                        <rect key="frame" x="0.0" y="106.33333333333331" width="353" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CB-ll-uR8">
-                                                                <rect key="frame" x="233" y="0.0" width="120" height="32"/>
+                                                                <rect key="frame" x="253" y="0.0" width="100" height="50"/>
                                                                 <color key="backgroundColor" red="0.14117647059999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="120" id="3xI-cp-Gnm"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="J21-2t-ma5"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Edit Name">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -634,7 +649,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XJI-IW-XNU">
-                                                <rect key="frame" x="0.0" y="157.33333333333331" width="353" height="87.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="175.33333333333331" width="353" height="87.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-rq-QFc">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="19.333333333333332"/>
@@ -654,15 +669,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-9F-euC">
-                                                <rect key="frame" x="0.0" y="263.66666666666669" width="353" height="32"/>
+                                                <rect key="frame" x="0.0" y="281.66666666666669" width="353" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R26-FY-wfN">
-                                                        <rect key="frame" x="233" y="0.0" width="120" height="32"/>
+                                                        <rect key="frame" x="256" y="0.0" width="97" height="50"/>
                                                         <color key="backgroundColor" red="0.14117647059999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="120" id="6io-Zw-5UX"/>
+                                                            <constraint firstAttribute="height" constant="50" id="qBw-NH-CjV"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Edit Email">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1117,9 +1133,13 @@
                     </view>
                     <connections>
                         <outlet property="creatTapped" destination="8C2-Zn-daF" id="xTv-Je-oPl"/>
+                        <outlet property="descriptionLabel" destination="CAu-em-j0c" id="hWm-Jd-FV9"/>
                         <outlet property="discriptionTF" destination="5W5-eg-Rwv" id="0rY-Q8-l6M"/>
+                        <outlet property="priorityLabel" destination="Y0M-yD-SE0" id="e9Y-uw-djV"/>
                         <outlet property="priorityTF" destination="ZEb-8n-Vdx" id="zIi-P7-ho5"/>
+                        <outlet property="timeLabel" destination="xP1-32-tj5" id="m4i-j7-pdP"/>
                         <outlet property="timeTF" destination="bAM-7C-lsu" id="byV-2i-vX7"/>
+                        <outlet property="titleLabel" destination="Duv-Ro-ML2" id="CxA-Cq-Op3"/>
                         <outlet property="titleTF" destination="JRN-jY-45W" id="MVw-ku-ET6"/>
                     </connections>
                 </viewController>
@@ -1708,7 +1728,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Tq0-ml-Yz3">
-                                <rect key="frame" x="30" y="109.33333333333331" width="333" height="603.33333333333348"/>
+                                <rect key="frame" x="30" y="109.33333333333331" width="333" height="521.33333333333348"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Oku-s7-J7Q">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="521.33333333333337"/>
@@ -1805,20 +1825,6 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IIg-El-pLv">
-                                        <rect key="frame" x="0.0" y="553.33333333333326" width="333" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWZ-ub-CuV">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Dco-qn-OED"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -1833,10 +1839,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="fkT-UZ-CnB" id="z29-Ao-sP5"/>
                         <outlet property="editDescrriptionTF" destination="p9C-aY-Y0h" id="Aib-mi-78P"/>
                         <outlet property="editPriorityTF" destination="VIp-Uw-7dU" id="l69-wg-mpz"/>
                         <outlet property="editTitleTF" destination="ajf-WB-9Q4" id="HBk-6d-vii"/>
+                        <outlet property="editTodayLabel" destination="tVa-0I-oKf" id="Xzh-J4-wrj"/>
+                        <outlet property="priorityLabel" destination="9KY-JI-ULA" id="yZE-j9-PrE"/>
+                        <outlet property="timeLabel" destination="9qJ-gn-N9Y" id="YBK-Sz-QbB"/>
                         <outlet property="timeTF" destination="DCh-jo-D1z" id="9CG-fF-gbz"/>
+                        <outlet property="titleLabel" destination="YIe-cr-pJm" id="xl2-da-Chm"/>
                         <outlet property="updateButton" destination="nZ9-HL-w7m" id="CFB-nW-NDS"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,7 @@
 "create_account" = "إنشاء حساب";
 "create_your_account_and_feel_the_benefits" = "أنشئ حسابك وأشعر بالفوائد";
 "confirm_password" = "تأكيد كلمة المرور";
+"sign_up" = "اشتراك";
 
 
 // Settings View Controller
@@ -40,3 +41,23 @@
 "edit_email" = "تحرير البريد الإلكتروني";
 
 
+// CreateTodo Screen
+
+"title" = "عنوان";
+"description" = "وصف";
+"priority" = "أولوية";
+"time" = "وقت";
+"create" = "يخلق";
+
+
+// EditTodo Screen
+
+"update" = "تحديث";
+"edit_today" = "تحرير اليوم";
+
+
+//Tabbar Text
+
+"home" = "بيت";
+"upcomings" = "القادمة";
+"settings" = "إعدادات";

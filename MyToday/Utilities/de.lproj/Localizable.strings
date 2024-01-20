@@ -17,6 +17,7 @@
 "create_account" = "Benutzerkonto erstellen";
 "create_your_account_and_feel_the_benefits" = "Erstellen Sie Ihr Konto und profitieren Sie von den Vorteilen";
 "confirm_password" = "Bestätige das Passwort";
+"sign_up" = "Melden Sie sich an";
 
 
 // Settings View Controller
@@ -40,3 +41,23 @@
 "edit_email" = "E-Mail bearbeiten";
 
 
+// CreateTodo Screen
+
+"title" = "Titel";
+"description" = "Beschreibung";
+"priority" = "Priorität";
+"time" = "Zeit";
+"create" = "Erstellen";
+
+
+// EditTodo Screen
+
+"update" = "Aktualisieren";
+"edit_today" = "Heute bearbeiten";
+
+
+//Tabbar Text
+
+"home" = "Heim";
+"upcomings" = "Kommende";
+"settings" = "Einstellungen";
