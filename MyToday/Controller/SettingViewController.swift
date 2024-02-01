@@ -12,39 +12,27 @@ import CoreData
 class SettingViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var switchButton: UISwitch!
-    
     @IBOutlet weak var userName: UILabel!
-    
     @IBOutlet weak var accountLabel: UILabel!
-    
     @IBOutlet weak var languagesLabel: UILabel!
-    
     @IBOutlet weak var appIconLabel: UILabel!
-    
     @IBOutlet weak var changeModeLabel: UILabel!
-    
     @IBOutlet weak var privacyLabel: UILabel!
-    
     @IBOutlet weak var helpCenterLabel: UILabel!
-    
     @IBOutlet weak var logOutLabel: UILabel!
     
     let userCoreDataManager = UserCoreDataManager()
-    
     var languageIndex = LanguageIndex.currentIndex
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         editImageandView()
-        
         profileImage()
         userLoginName()
-        
         updateLabelsLanguage()
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,9 +95,36 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let alertController = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
+            self?.performLogout()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(yesAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
+    
+    private func performLogout() {
+        
+        UserDefaults.standard.set(false, forKey: "isRememberMe")
+        
+        // 2. set root controller
+        
+        let signInVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        let signInNavigation = UINavigationController(rootViewController: signInVC)
+        signInNavigation.isNavigationBarHidden = true
+        
+        let window = (UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate).window
+        window?.rootViewController = signInNavigation
+        window?.makeKeyAndVisible()
+    }
+    
     
     @IBAction func languagesButtonTapped(_ sender: Any){
         

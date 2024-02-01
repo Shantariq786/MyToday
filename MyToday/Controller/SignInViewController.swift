@@ -24,22 +24,17 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signUpNowButton: UIButton!
     @IBOutlet weak var rememberMeLabel: UILabel!
     
-    
     let userCoreDataManager = UserCoreDataManager()
-    
     var rememberMeIcon: Bool = false
-    
     var iconClick = true
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         passwordInDots()
-        // Do any additional setup after loading the view.
         signInButton.setThemeColor()
-        
         updateLabelsLanguage()
+        roundSignInButton()
     }
     
     func updateLabelsLanguage() {
@@ -64,44 +59,33 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
-        
-        
+    
         let enteredEmail = emailTF.text ?? ""
         let enteredPassword = passwordTF.text ?? ""
-        
         if enteredEmail.lowercased() == "" {
-            
             Loaf("Pleease enter the email", state: .error, location: .top, sender: self).show()
-            
         }else if enteredPassword == "" {
-            
             Loaf("Please entered the password", state: .error, location: .top, sender: self).show()
-            
         }else if !enteredEmail.lowercased().isEmailValid(){
-            
             Loaf("Please enter valid email", state: .error, location: .top, sender: self).show()
-            
         }else if !enteredPassword.isPasswordValid(){
-            
             Loaf("Pleease enter atleast eight characters", state: .error, location: .top, sender: self).show()
-            
         }else if userCoreDataManager.getUser(forEmail: enteredEmail, password: enteredPassword) == nil{ // email or passsword invalid
             Loaf("Email or password is not correct", state: .error, location: .top, sender: self).show()
-            
         }else {
             guard let user = userCoreDataManager.getUser(forEmail: enteredEmail, password: enteredPassword) else { return }
             let userId = user.id ?? UUID()
             
             if rememberMeIcon == true{
                 UserDefaults.standard.set(true, forKey: "isRememberMe")
-                
             }
             
             UserDefaults.standard.set(userId.uuidString, forKey: "isUserId")
             
-            let tabbar = Tabbar()
+            let tabbar = TabbarViewController()
             self.navigationController?.pushViewController(tabbar, animated: true)
             Loaf("Success", state: .success, location: .top, sender: self).show()
+         
             
         }
     }
@@ -154,6 +138,12 @@ class SignInViewController: UIViewController {
             passwordTF.isSecureTextEntry = true
         }
         iconClick = !iconClick
+        
+    }
+    
+    func roundSignInButton(){
+        
+        signInButton.layer.cornerRadius = 16
         
     }
 }

@@ -14,33 +14,20 @@ import TOCropViewController
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
-    
     @IBOutlet weak var userName: UITextField!
-    
     @IBOutlet weak var uploadProfileImage: UIButton!
-    
     @IBOutlet weak var userEmail: UITextField!
-    
     @IBOutlet weak var editName: UIButton!
-    
     @IBOutlet weak var editEmail: UIButton!
-    
     @IBOutlet weak var profileLabel: UILabel!
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var emailLabel: UILabel!
     
     let userCoreDataManager = UserCoreDataManager()
-    
     var localItems: [Todo] = []
-    
     let imagePicker = ImagePicker()
-    
     var languageIndex = LanguageIndex.currentIndex
-    
     var userImage:((_ image:UIImage)->Void)?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,17 +86,13 @@ class ProfileViewController: UIViewController {
         
         
         let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
-        
         let chooseLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { _ in
             self.imagePicker.photoGalleryAsscessRequest()
         }
-        
         let chooseCameraAction = UIAlertAction(title: "Choose from Camera", style: .default) { _ in
             self.imagePicker.cameraAsscessRequest()
         }
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
         alertController.addAction(chooseLibraryAction)
         alertController.addAction(chooseCameraAction)
         alertController.addAction(cancelAction)
@@ -119,7 +102,6 @@ class ProfileViewController: UIViewController {
             popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
             popoverController.permittedArrowDirections = []
         }
-        
         present(alertController, animated: true, completion: nil)
     }
     

@@ -14,8 +14,6 @@ class AppIconViewController: UIViewController {
     
     var icons = [ "icon 1", "icon 2", "icon 3", "icon 4", "icon 5", "icon 6", "icon 7", "icon 8", "icon 9", "icon 10","icon 11", "icon 12", "icon 13", "icon 14", "icon 15"
     ]
-    
-    
     var selectedIndex = 0
     
     override func viewDidLoad() {
@@ -23,13 +21,10 @@ class AppIconViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        
         collectionView.register(UINib(nibName: "AppIconCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AppIconCollectionViewCell")
-        
         selectedIndex = ColorTheme.currentIndex
         
     }
-    
 }
 
 
@@ -38,7 +33,7 @@ class AppIconViewController: UIViewController {
 
 
 extension AppIconViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
-
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return icons.count
@@ -75,8 +70,19 @@ extension AppIconViewController: UICollectionViewDataSource, UICollectionViewDel
         NotificationCenter.default.post(name: Notification.Name("currentThemeChanged"), object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateLabelsLanguage), name: Notification.Name("currentThemeChanged"), object: nil)
+    }
     
-    
-    
+    @objc func updateLabelsLanguage() {
+        DispatchQueue.main.async {
+            
+            self.navigationController?.navigationBar.tintColor = UIColor(named: THEME_COLORS[self.selectedIndex])
+            
+        }
+    }
     
 }

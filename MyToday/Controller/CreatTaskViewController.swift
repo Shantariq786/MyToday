@@ -11,7 +11,6 @@ import CoreData
 
 class CreatTaskViewController: UIViewController {
     
-    
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var discriptionTF: UITextField!
     @IBOutlet weak var priorityTF: UITextField!
@@ -21,7 +20,6 @@ class CreatTaskViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priorityLabel: UILabel!
     @IBOutlet weak var timeLabel:UILabel!
-    
     
     let todoCoreDataManager = TodoCoreDataManager()
     var localItems: [Todo] = []
@@ -59,13 +57,9 @@ class CreatTaskViewController: UIViewController {
         let priority = priorityTF.text ?? ""
         let time = timeTF.text ?? ""
         
-        
         let isInuputValid = checkInput(title: title, description: description, priority: priority, time: time)
-        
         let isUserId = UserDefaults.standard.string(forKey: "isUserId") ?? ""
-        
         if isInuputValid == true{ // save data
-            
             
             let uuid = UUID()
             todoCoreDataManager.createTodo(uuid:uuid, title: title, description: description, priority: priority, time: time, userID: UUID(uuidString: isUserId)!)
@@ -73,7 +67,6 @@ class CreatTaskViewController: UIViewController {
             // triger notification
             requestForNotificationAutherization()
             triggerLocalNotification(uuid: uuid)
-            
             
             self.navigationController?.popViewController(animated: true)
         }

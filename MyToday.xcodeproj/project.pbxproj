@@ -12,6 +12,10 @@
 		751458E62B2C35F2009D77D4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751458E52B2C35F2009D77D4 /* UIView+Extension.swift */; };
 		7518CDB92AEA8A4200ACADCE /* DashbordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7518CDB82AEA8A4200ACADCE /* DashbordViewController.swift */; };
 		7523B70E2B2C29CB001E0B4A /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523B70D2B2C29CB001E0B4A /* CalculatorViewController.swift */; };
+		752E83902B6A480700CB9DA6 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752E838F2B6A480700CB9DA6 /* SideMenu.storyboard */; };
+		752E83932B6A4D3A00CB9DA6 /* Bottonsheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752E83922B6A4D3A00CB9DA6 /* Bottonsheet.storyboard */; };
+		752E83952B6A4DE700CB9DA6 /* ButtomSheetButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752E83942B6A4DE700CB9DA6 /* ButtomSheetButtonViewController.swift */; };
+		752E83972B6A511C00CB9DA6 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752E83962B6A511C00CB9DA6 /* BottomSheetViewController.swift */; };
 		752FC5722B3EC18500E86F5D /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 752FC5712B3EC18500E86F5D /* edit.png */; };
 		752FC5742B3ED1EA00E86F5D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FC5732B3ED1EA00E86F5D /* SettingViewController.swift */; };
 		755AB3A32AF6450E00860503 /* TodoCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755AB3A22AF6450E00860503 /* TodoCoreDataManager.swift */; };
@@ -20,7 +24,7 @@
 		755AB3AC2AF669A900860503 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755AB3AA2AF669A900860503 /* UserTableViewCell.swift */; };
 		755AB3AD2AF669A900860503 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755AB3AB2AF669A900860503 /* UserTableViewCell.xib */; };
 		757E1E842B3D4E81000C4143 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757E1E832B3D4E81000C4143 /* ImagePicker.swift */; };
-		7589C5002B208334008AAB37 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7589C4FF2B208334008AAB37 /* Tabbar.swift */; };
+		7589C5002B208334008AAB37 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7589C4FF2B208334008AAB37 /* TabbarViewController.swift */; };
 		7589C5022B2086F1008AAB37 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7589C5012B2086F1008AAB37 /* ProfileViewController.swift */; };
 		7589C5042B208DA0008AAB37 /* UpComingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7589C5032B208DA0008AAB37 /* UpComingsViewController.swift */; };
 		7589C5062B209C9B008AAB37 /* Colour+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7589C5052B209C9B008AAB37 /* Colour+Extension.swift */; };
@@ -46,6 +50,8 @@
 		75B69B802AF3B534007CB90C /* UINavigation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B69B7F2AF3B534007CB90C /* UINavigation+Extension.swift */; };
 		75B69B822AF3BE7B007CB90C /* ticl.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B69B812AF3BE7A007CB90C /* ticl.png */; };
 		75B69B842AF619FF007CB90C /* CreatTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B69B832AF619FF007CB90C /* CreatTaskViewController.swift */; };
+		75BBC6382B6A3EB6009C749A /* SidemMenuButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BBC6372B6A3EB6009C749A /* SidemMenuButtonViewController.swift */; };
+		75BBC63A2B6A3ED0009C749A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BBC6392B6A3ED0009C749A /* SideMenuViewController.swift */; };
 		75CF02A82B3D5CA2002613CD /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF02A72B3D5CA2002613CD /* EditNameViewController.swift */; };
 		75CF02AA2B3D5CD0002613CD /* EditEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF02A92B3D5CD0002613CD /* EditEmailViewController.swift */; };
 		75CFFCF02B57E4B200067DE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75CFFCF22B57E4B200067DE5 /* Localizable.strings */; };
@@ -66,6 +72,10 @@
 		751458E52B2C35F2009D77D4 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7518CDB82AEA8A4200ACADCE /* DashbordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbordViewController.swift; sourceTree = "<group>"; };
 		7523B70D2B2C29CB001E0B4A /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		752E838F2B6A480700CB9DA6 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		752E83922B6A4D3A00CB9DA6 /* Bottonsheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bottonsheet.storyboard; sourceTree = "<group>"; };
+		752E83942B6A4DE700CB9DA6 /* ButtomSheetButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomSheetButtonViewController.swift; sourceTree = "<group>"; };
+		752E83962B6A511C00CB9DA6 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		752FC5712B3EC18500E86F5D /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		752FC5732B3ED1EA00E86F5D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		755AB3A22AF6450E00860503 /* TodoCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCoreDataManager.swift; sourceTree = "<group>"; };
@@ -74,7 +84,7 @@
 		755AB3AA2AF669A900860503 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		755AB3AB2AF669A900860503 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		757E1E832B3D4E81000C4143 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		7589C4FF2B208334008AAB37 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		7589C4FF2B208334008AAB37 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		7589C5012B2086F1008AAB37 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7589C5032B208DA0008AAB37 /* UpComingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingsViewController.swift; sourceTree = "<group>"; };
 		7589C5052B209C9B008AAB37 /* Colour+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colour+Extension.swift"; sourceTree = "<group>"; };
@@ -102,6 +112,8 @@
 		75B69B7F2AF3B534007CB90C /* UINavigation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+Extension.swift"; sourceTree = "<group>"; };
 		75B69B812AF3BE7A007CB90C /* ticl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ticl.png; sourceTree = "<group>"; };
 		75B69B832AF619FF007CB90C /* CreatTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatTaskViewController.swift; sourceTree = "<group>"; };
+		75BBC6372B6A3EB6009C749A /* SidemMenuButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidemMenuButtonViewController.swift; sourceTree = "<group>"; };
+		75BBC6392B6A3ED0009C749A /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		75CF02A72B3D5CA2002613CD /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		75CF02A92B3D5CD0002613CD /* EditEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmailViewController.swift; sourceTree = "<group>"; };
 		75CFFCF12B57E4B200067DE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -150,6 +162,15 @@
 				751458E32B2C2FA5009D77D4 /* SpinView.xib */,
 			);
 			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		752E83912B6A4D0100CB9DA6 /* Botton Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				752E83942B6A4DE700CB9DA6 /* ButtomSheetButtonViewController.swift */,
+				752E83962B6A511C00CB9DA6 /* BottomSheetViewController.swift */,
+			);
+			path = "Botton Sheet";
 			sourceTree = "<group>";
 		};
 		755AB39C2AF6449C00860503 /* User Coredata */ = {
@@ -246,6 +267,8 @@
 			children = (
 				75A1385F2AE918DC00E311F0 /* Main.storyboard */,
 				75A138672AE918DF00E311F0 /* LaunchScreen.storyboard */,
+				752E838F2B6A480700CB9DA6 /* SideMenu.storyboard */,
+				752E83922B6A4D3A00CB9DA6 /* Bottonsheet.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +276,8 @@
 		75A138712AE927CE00E311F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				752E83912B6A4D0100CB9DA6 /* Botton Sheet */,
+				75BBC6362B6A3E90009C749A /* Side Menu */,
 				7523B70D2B2C29CB001E0B4A /* CalculatorViewController.swift */,
 				751458E02B2C2F56009D77D4 /* Custom View */,
 				75A138722AE927EC00E311F0 /* SignUpViewController.swift */,
@@ -262,7 +287,7 @@
 				7518CDB82AEA8A4200ACADCE /* DashbordViewController.swift */,
 				75B69B832AF619FF007CB90C /* CreatTaskViewController.swift */,
 				7589C5072B21DE9A008AAB37 /* EditTodayViewController.swift */,
-				7589C4FF2B208334008AAB37 /* Tabbar.swift */,
+				7589C4FF2B208334008AAB37 /* TabbarViewController.swift */,
 				7589C5012B2086F1008AAB37 /* ProfileViewController.swift */,
 				752FC5732B3ED1EA00E86F5D /* SettingViewController.swift */,
 				75A21F5D2B5673D0001AF248 /* LanguagesViewController.swift */,
@@ -290,6 +315,15 @@
 				755AB39C2AF6449C00860503 /* User Coredata */,
 			);
 			path = Coredata;
+			sourceTree = "<group>";
+		};
+		75BBC6362B6A3E90009C749A /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				75BBC6372B6A3EB6009C749A /* SidemMenuButtonViewController.swift */,
+				75BBC6392B6A3ED0009C749A /* SideMenuViewController.swift */,
+			);
+			path = "Side Menu";
 			sourceTree = "<group>";
 		};
 		75EB84562B400CFF005E6BC5 /* App Icon */ = {
@@ -408,7 +442,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752E83932B6A4D3A00CB9DA6 /* Bottonsheet.storyboard in Resources */,
 				752FC5722B3EC18500E86F5D /* edit.png in Resources */,
+				752E83902B6A480700CB9DA6 /* SideMenu.storyboard in Resources */,
 				751458E42B2C2FA5009D77D4 /* SpinView.xib in Resources */,
 				75A21F632B567C9C001AF248 /* LanguagesTableViewCell.xib in Resources */,
 				75A138692AE918DF00E311F0 /* LaunchScreen.storyboard in Resources */,
@@ -477,14 +513,17 @@
 				757E1E842B3D4E81000C4143 /* ImagePicker.swift in Sources */,
 				75ED63DE2AEBC7CB00467B14 /* String+Extension.swift in Sources */,
 				752FC5742B3ED1EA00E86F5D /* SettingViewController.swift in Sources */,
+				752E83952B6A4DE700CB9DA6 /* ButtomSheetButtonViewController.swift in Sources */,
 				75A1385A2AE918DC00E311F0 /* AppDelegate.swift in Sources */,
 				75B69B7E2AF29775007CB90C /* forgotPasswordNewPasswordViewController.swift in Sources */,
 				7589C5042B208DA0008AAB37 /* UpComingsViewController.swift in Sources */,
 				75A138752AE9282400E311F0 /* SignInViewController.swift in Sources */,
 				755AB3A72AF645E500860503 /* Todo+CoreDataProperties.swift in Sources */,
+				75BBC6382B6A3EB6009C749A /* SidemMenuButtonViewController.swift in Sources */,
 				75EB845F2B403E16005E6BC5 /* AppIconCollectionViewCell.swift in Sources */,
 				75B69B802AF3B534007CB90C /* UINavigation+Extension.swift in Sources */,
 				7523B70E2B2C29CB001E0B4A /* CalculatorViewController.swift in Sources */,
+				75BBC63A2B6A3ED0009C749A /* SideMenuViewController.swift in Sources */,
 				7589C5082B21DE9A008AAB37 /* EditTodayViewController.swift in Sources */,
 				75B69B842AF619FF007CB90C /* CreatTaskViewController.swift in Sources */,
 				755AB3A32AF6450E00860503 /* TodoCoreDataManager.swift in Sources */,
@@ -494,7 +533,7 @@
 				75A21F622B567C9C001AF248 /* LanguagesTableViewCell.swift in Sources */,
 				751458E22B2C2F87009D77D4 /* SpinView.swift in Sources */,
 				75CF02AA2B3D5CD0002613CD /* EditEmailViewController.swift in Sources */,
-				7589C5002B208334008AAB37 /* Tabbar.swift in Sources */,
+				7589C5002B208334008AAB37 /* TabbarViewController.swift in Sources */,
 				758CD20F2B4151050074AE58 /* Constants.swift in Sources */,
 				75ACA3AD2AEF8EA900B36FE6 /* User+CoreDataClass.swift in Sources */,
 				75A21F5E2B5673D0001AF248 /* LanguagesViewController.swift in Sources */,
@@ -507,6 +546,7 @@
 				75A138732AE927EC00E311F0 /* SignUpViewController.swift in Sources */,
 				75B69B782AF263EF007CB90C /* ForgetPasswordEmailViewController.swift in Sources */,
 				75EB845C2B400D45005E6BC5 /* AppIconViewController.swift in Sources */,
+				752E83972B6A511C00CB9DA6 /* BottomSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

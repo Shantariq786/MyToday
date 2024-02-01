@@ -12,8 +12,9 @@ class LanguagesViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     let languages = ["English", "Urdu", "Hindi", "French", "German", "Chineese", "Italian", "Swedish", "Korean", "Arabic", "Turkish"]
-    
     var selectedLanguageIndex = 0
+    
+    var themeIndex = ColorTheme.currentIndex
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class LanguagesViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.register(UINib(nibName: "LanguagesTableViewCell", bundle: nil), forCellReuseIdentifier: "LanguagesTableViewCell")
         selectedLanguageIndex = LanguageIndex.currentIndex
-
+            
     }
     
 

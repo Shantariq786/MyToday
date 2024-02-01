@@ -21,9 +21,7 @@ class EditTodayViewController: UIViewController {
     @IBOutlet weak var editTodayLabel: UILabel!
     
     var editItem: Todo? = nil
-    
     let todoCoreDataManager = TodoCoreDataManager()
-    
     var localItems: [Todo] = []
 
     override func viewDidLoad() {

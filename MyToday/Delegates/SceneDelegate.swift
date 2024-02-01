@@ -16,10 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     {
         guard let windowScene = scene as? UIWindowScene else { return }
         let window = UIWindow(windowScene: windowScene)
-        
-        let isRememberMe = UserDefaults.standard.bool(forKey: "isRememberMe")
 
-        let tabbar = Tabbar()
+        let isRememberMe = UserDefaults.standard.bool(forKey: "isRememberMe") // get
+        //let color = ColorTheme.currentIndex // get
+        //ColorTheme.currentIndex = 1 // set
+
+        let tabbar = TabbarViewController()
 
 
 //        let signInVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
@@ -41,7 +43,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
 
-//        tabbar.viewcontroller = [signInNavigation, dashbordNavigation]
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

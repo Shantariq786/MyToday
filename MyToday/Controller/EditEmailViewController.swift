@@ -10,23 +10,22 @@ import CoreData
 import Loaf
 
 class EditEmailViewController: UIViewController {
-
-    @IBOutlet weak var updatedEmail: UITextField!
     
+    @IBOutlet weak var updatedEmail: UITextField!
     @IBOutlet weak var updateEmailButton: UIButton!
     
     let userCoreDataManager = UserCoreDataManager()
-    
     var emailUpdated:((_ email:String)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         updateEmailButton.layer.cornerRadius = 16
         updateEmailButton.setThemeColor()
+        
     }
     
-
+    
     @IBAction func updateButtonTapped(_ sender: Any){
         
         if updatedEmail.text != ""{
@@ -38,7 +37,5 @@ class EditEmailViewController: UIViewController {
         } else {
             Loaf("Updated name cannot be empty", state: .error, location: .top, sender: self).show()
         }
-        
     }
-
 }

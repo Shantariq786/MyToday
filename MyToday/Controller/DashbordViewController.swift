@@ -13,7 +13,6 @@ class DashbordViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
     let todoCoreDataManager = TodoCoreDataManager()
-    
     var localItems: [Todo] = []
     var themeIndex = ColorTheme.currentIndex
     
@@ -45,10 +44,11 @@ class DashbordViewController: UIViewController{
     
     @IBAction func addButtonTapped(_ sender: Any){
         
-        // notification trigger here
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreatTaskViewController") as! CreatTaskViewController
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreatTaskViewController") as! CreatTaskViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let vc = UIStoryboard(name: "Bottonsheet", bundle: nil).instantiateViewController(withIdentifier: "ButtomSheetButtonViewController") as! ButtomSheetButtonViewController
         self.navigationController?.pushViewController(vc, animated: true)
-        //triggerLocalNotification()
         
         
     }
@@ -156,19 +156,3 @@ extension DashbordViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-
-
-
-
-// swipe feature (delete)
-// password issue
-// date and time wheel
-
-
-// dynamic
-// 1. save user object in user default instead of boolean
-//2. userdefault.user.id will use in create todo
-
-
-//1. user default can never save an object
-//2. stackoverflow

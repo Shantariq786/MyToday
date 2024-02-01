@@ -2094,7 +2094,7 @@
     </scenes>
     <resources>
         <image name="Arrow - Right 2" width="512" height="512"/>
-        <image name="Category" width="20" height="20"/>
+        <image name="Category" width="512" height="512"/>
         <image name="Profile" width="512" height="512"/>
         <image name="Vector 15" width="32768" height="200"/>
         <image name="bitcoinlogo" width="326" height="512"/>

@@ -12,16 +12,14 @@ import Loaf
 class EditNameViewController: UIViewController {
     
     @IBOutlet weak var updatedName: UITextField!
-    
     @IBOutlet weak var updateNameButton: UIButton!
     
     var nameUpdated:((_ name:String)->Void)?
-    
     let userCoreDataManager = UserCoreDataManager()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         updateNameButton.layer.cornerRadius = 16
         updateNameButton.setThemeColor()
         
@@ -40,7 +38,5 @@ class EditNameViewController: UIViewController {
         else{
             Loaf("Updated name cannot be empty", state: .error, location: .top, sender: self).show()
         }
-        
     }
-
 }
